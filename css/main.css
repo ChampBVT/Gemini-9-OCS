@@ -1,32 +1,60 @@
+@font-face {
+    font-family: K2D;
+    src: url(../asset/font/K2D-Regular.ttf);
+}
+
+@font-face {
+    font-family: K2D;
+    src: url(../asset/font/K2D-Bold.ttf);
+    font-weight: bold;
+}
+
 html, body {
     height: 100%;
     position:relative;
     overflow: hidden;
 }
 
+*{
+    font-family: K2D, Roboto, Arial;
+}
+
 .pagebase {
     width: 100%;
-    height: calc(100vh - 56px);
+    height: calc(100vh - 68px);
 }
 
 .grid-two-column {
     display: grid;
     grid-template-columns: .3fr .7fr;
     height: 100%;
+    width: 100%;
+}
+
+.equal {
+    grid-template-columns: .5fr .5fr;
 }
 
 .whitebg{
-    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.8);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: white;
+    height: 100%;
+    width: 100%;
 }
 
-.flex-row{
-    display: flex;
-    flex-direction: column;
+.border-radius{
+    border-radius: 11px;
+}
+
+.padding{
+    padding: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 .bold{
@@ -47,4 +75,59 @@ html, body {
 
 .med-bold{
     font-weight: 500;
+}
+
+.home-grid{
+    display: grid;
+    grid-template-rows: .35fr .3fr .35fr;
+    height: 100%;
+    width: 100%;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.action{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+.bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-link{
+    font-size: 20px;
+}
+
+.button{
+    cursor: pointer;
+}
+
+.button:hover{
+    cursor: pointer;
+    transition: .3s ease;
+    opacity: 0.85;
+}
+
+.dropdown-item:hover{
+    background-color: #CCCCCC;
 }
