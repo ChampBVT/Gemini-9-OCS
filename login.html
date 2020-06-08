@@ -9,29 +9,35 @@
 </head>
 <body>
 <div class="pagebase" style="height: 100vh;">
-    <img src="asset/img/bg.jpg" style="height: 100%; position: absolute; z-index: -1; overflow: hidden; left: 30vw;"/>
+    <img src="asset/img/bg.jpg" style="height: 100%; position: absolute; z-index: -1; left: 30vw;"/>
     <div class="grid-two-column">
         <div class="whitebg">
-            <form class="form">
+            <form id="login" class="form needs-validation" novalidate>
                 <p class="bold center" style="text-align: center; font-size: 20px;">Welcome to Gemini OCS System</p>
                 <div class="form-group">
                     <label for="email" class="med-bold">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" required>
+                    <div class="invalid-feedback">
+                        Please provide the username.
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password" class="med-bold">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    <div class="invalid-feedback">
+                        Please provide the password.
+                    </div>
                 </div>
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1"><p class="med-bold no-margin">Remember Me</p></label>
+                    <label class="form-check-label" for="exampleCheck1"><p class="med-bold no-margin" style="color: black;">Remember Me</p></label>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block"><p class="bold no-margin">Sign in</p></button>
+                <button id="signin" type="submit" class="btn btn-primary btn-block" ><p class="bold no-margin">Sign in</p></button>
             </form>
         </div>
     </div>
 </div>
-<body>
+</body>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
