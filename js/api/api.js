@@ -1,16 +1,8 @@
-const API_URL = 'http://localhost:8080/heroes';
+const API_URL = 'http://192.168.1.45:8080';
 
-const login = async (email , pwd) => {
-    const data = {
-        email,
-        pwd
-    }
-    const res = await fetch(`${API_URL}`, {
+const login = async (username, pwd) => {
+    const res = await fetch(`${API_URL}/login?username=${username}&password=${pwd}`, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
     })
-    return res.json()
+    return res
 }
