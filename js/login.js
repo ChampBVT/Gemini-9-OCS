@@ -1,4 +1,3 @@
-import {login} from "./api/api.js";
 
 $(document).ready(() => {
     const $form = $("#login");

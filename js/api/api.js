@@ -1,6 +1,6 @@
 const API_URL = 'http://localhost:8080/heroes';
 
-export const login = async (email , pwd) => {
+const login = async (email , pwd) => {
     const data = {
         email,
         pwd
