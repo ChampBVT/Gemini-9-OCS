@@ -7,7 +7,6 @@ $(document).ready(() => {
 const checkLogin = () => {
     if (window.sessionStorage.getItem("authorized") !== "true")
         window.location.href = `${prefix}/login.html`
-
 }
 
 const loadNavbar = () => {
