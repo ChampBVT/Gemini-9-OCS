@@ -18,7 +18,15 @@ const goToIndex = () => {
     window.location.href = `${prefix}/index.html`
 }
 
-const getCookie = (name) => {
-    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-    return v ? v[2] : null;
+const addActive = ( idx1 = -1, idx2 = -1) => {
+    $(window).on( "load",()=>{
+        $(".nav-item").each((index, obj) => {
+            if (index === idx1)
+                obj.classList.add("active")
+        })
+        $(".dropdown-item").each((index, obj) => {
+            if (index === idx2)
+                obj.classList.add("active")
+        })
+    })
 }

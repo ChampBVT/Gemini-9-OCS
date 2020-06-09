@@ -14,5 +14,7 @@
     <orderEntry type="library" name="popper.js" level="application" />
     <orderEntry type="library" name="jquery-3.5.1.slim" level="application" />
     <orderEntry type="library" name="jquery-3.5.1" level="application" />
+    <orderEntry type="library" name="moment" level="application" />
+    <orderEntry type="library" name="daterangepicker" level="application" />
   </component>
 </module>

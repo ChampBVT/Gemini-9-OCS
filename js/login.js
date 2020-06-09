@@ -8,8 +8,8 @@ $(document).ready(() => {
         if ($form[0].checkValidity() === true) {
             $button.prop("disabled",true);
             login($("#username").val(), $("#password").val()).then((res) => {
-                if (res.message === "successful") {
-                    window.sessionStorage.setItem("authorized", "true");
+                if (res.message === "Successful") {
+                    localStorage.setItem("token", res.token);
                     debugger
                     goToIndex();
                 } else {
