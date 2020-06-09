@@ -4,5 +4,5 @@ const login = async (username, pwd) => {
     const res = await fetch(`${API_URL}/login?username=${username}&password=${pwd}`, {
         method: 'POST',
     })
-    return res
+    return res.json()
 }
