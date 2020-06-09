@@ -1,6 +1,7 @@
 
 $( document ).ready(()=> {
-    //checkLogin();
+    checkLogin();
     loadNavbar();
     addActive(0);
+
 });

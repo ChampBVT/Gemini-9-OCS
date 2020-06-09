@@ -145,6 +145,16 @@ html, body {
     background-color: #CCCCCC;
 }
 
+.form-control.is-valid, .was-validated .form-control:valid{
+    border-color: #ced4da;
+    background-image: none;
+}
+
+.required{
+    color : red;
+    vertical-align: text-bottom;
+}
+
 @media screen and (max-width: 992px) {
     .grid-two-column {
         display: block;

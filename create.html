@@ -11,13 +11,14 @@
 <body>
 <div id="navbar" class="bg" style="background-image: url(./asset/img/navbar.jpg);"></div>
 <div class="pagebase">
-    <div class="flex-col head" style="padding: 20px; height: 10%">
-        Science Plan > Create
-    </div>
+
     <div style="display: flex; justify-content: center;">
         <div style="height: 90%; padding : 0 60px 60px 60px; width: 60%">
+            <div class="flex-col head" style="padding: 20px 20px 20px 0; height: 10%">
+                Science Plan > Create
+            </div>
             <div class="whitebg border-radius padding-2">
-                <form class="form-create">
+                <form class="form-create needs-validation" novalidate id="create">
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="creatorID">Creator ID</label>
@@ -25,30 +26,30 @@
                                    placeholder="123456" disabled>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="starsysname">Star System Name</label>
+                            <label for="starsysname">Star System Name<span class="required"> *</span></label>
                             <input type="text" class="form-control" id="starsysname"
-                                   placeholder="Andromeda">
+                                   placeholder="Andromeda" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="funding">Funding</label>
+                            <label for="funding">Funding<span class="required"> *</span></label>
                             <input type="number" class="form-control" id="funding"
-                                   placeholder="0.00">
+                                   placeholder="0.00" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="obj">Objective</label>
+                            <label for="obj">Objective<span class="required"> *</span></label>
                             <input type="text" class="form-control" id="obj"
-                                   placeholder="Destroy Earth">
+                                   placeholder="Destroy Earth" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="date">Date Range - Start</label>
-                            <input type="text" class="form-control" name="daterange" id="date"/>
+                            <label for="date">Date Range - Start<span class="required"> *</span></label>
+                            <input type="text" class="form-control" name="daterange" id="date" required/>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="location">Telescope Location</label>
+                            <label for="location">Telescope Location<span class="required"> *</span></label>
                             <select class="form-control" id="location">
                                 <option>TEST</option>
                                 <option>TEST2</option>
@@ -67,7 +68,7 @@
                             <textarea class="form-control" id="annotation" rows="4" style="resize: none;"></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary"
+                    <button type="submit" class="btn btn-primary" id="createBtn"
                             style="width: fit-content; padding: 5px 15px; align-self: flex-end;">Create
                     </button>
                 </form>

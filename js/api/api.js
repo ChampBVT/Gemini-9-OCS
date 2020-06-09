@@ -19,11 +19,41 @@ const test = async () => {
     const res = await fetch(`http://192.168.1.45:8080/api/users/10`, {
         method: 'GET',
         headers: {
-            //'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MiIsImV4cCI6MTU5MTcxNzY4NywiaWF0IjoxNTkxNzE0MDg3fQ.OHmQulv9Z0IRA6BjKtIOkx-HsKnMjaQVBQkl4d8VeMCP5tmvs6d0LJ2geIW5IS6Pw_x7Vt8HSg3VQqvAgpF2AQ',
-            'Content-Type': 'application/json',
-            'Accept' : '*/*',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
         }
     })
-    console.log(res)
+    const a = res.json().then(res => {
+        console.log(res)
+    })
+    console.log(a)
+    //return res.json()
+}
+const createPlan = async (data) => {
+    const res = await fetch(`${API_URL}/login`, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
     return res.json()
+}
+
+const test2 = () => {
+    $.ajax({
+        url: 'http://192.168.1.45:8080/api/users/10',
+        type: 'GET',
+        dataType: 'json',
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem("token")}`,
+        },
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (result) {
+            // CallBack(result);
+        },
+        error: function (error) {
+
+        }
+    });
 }

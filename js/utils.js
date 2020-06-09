@@ -1,12 +1,7 @@
-let prefix = ""
-$(document).ready(() => {
-    if (window.location.href.includes("localhost"))
-        prefix = "/Gemini-9-OCS"
-});
 
 const checkLogin = () => {
-    if (window.sessionStorage.getItem("authorized") !== "true")
-        window.location.href = `${prefix}/login.html`
+    if (localStorage.getItem("token")===null)
+        window.location.href = `./login.html`
 }
 
 const loadNavbar = () => {
@@ -14,7 +9,7 @@ const loadNavbar = () => {
 }
 
 const goToIndex = () => {
-    window.location.href = `${prefix}/index.html`
+    window.location.href = `./index.html`
 }
 
 const addActive = ( idx1 = -1, idx2 = -1) => {
