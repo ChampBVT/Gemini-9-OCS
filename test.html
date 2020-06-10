@@ -20,16 +20,10 @@
             <div class="whitebg border-radius padding-2">
                 <form class="form-create needs-validation" novalidate id="create">
                     <div class="row">
-                        <div class="form-group col-md-12">
-                            <label for="planName">Science Plan Name<span class="required"> *</span></label>
-                            <input type="text" class="form-control" id="planName"
-                                   placeholder="Plan Name" required>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="form-group col-md-6">
                             <label for="creatorID">Creator ID</label>
-                            <input type="number" class="form-control" id="creatorID" disabled>
+                            <input type="number" class="form-control" id="creatorID"
+                                   placeholder="10" disabled>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="funding">Funding<span class="required"> *</span></label>
@@ -98,18 +92,18 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label style="width: 100%;">Color Type<span class="required"> *</span></label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="colorType"
-                                           id="inlineRadio4"
-                                           value="BW">
-                                    <label class="form-check-label" for="inlineRadio4">B & W</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="colorType"
-                                           id="inlineRadio5"
-                                           value="COLOR" checked>
-                                    <label class="form-check-label" for="inlineRadio5">Color</label>
-                                </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="colorType"
+                                       id="inlineRadio4"
+                                       value="BW">
+                                <label class="form-check-label" for="inlineRadio4">B & W</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="colorType"
+                                       id="inlineRadio5"
+                                       value="COLOR" checked>
+                                <label class="form-check-label" for="inlineRadio5">Color</label>
+                            </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="contrast">Contrast</label>
@@ -132,7 +126,7 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label for="annotation">Annotations</label>
-                            <textarea class="form-control" id="annotation" rows="2"
+                            <textarea class="form-control" id="annotation" rows="4"
                                       style="resize: none;"></textarea>
                         </div>
                     </div>
@@ -153,7 +147,7 @@
 <script type="text/javascript" src="js/lib/daterangepicker.min.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/api/api.js"></script>
-<script src="js/page/create.js"></script>
+<script src="js/page/test.js"></script>
 
 
 </html>
