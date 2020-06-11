@@ -37,10 +37,10 @@ const getToken = () => {
     return item.token
 }
 
-const saveToLocalStr = (fname, usrId, token, role) => {
+const saveToLocalStr = (name, usrId, token, role) => {
     const now = new Date()
     const item = {
-        userName: fname,
+        userName: name,
         userId: usrId,
         token: token,
         role: role.replace('ROLE_',''),

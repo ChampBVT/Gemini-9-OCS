@@ -22,14 +22,14 @@ const showTable = () => {
                         $('#table-body').append(`
                         <tr style='line-height: 2.2;'>
                         <th scope='row'>${sp.id}</th>
-                        <td>${sp.name}</td>
-                        <td>${sp.creatorUser.fullname}</td>
-                        <td>${sp.funding}</td>
+                        <td class='text-ovf'>${sp.name}</td>
+                        <td class='text-ovf'>${sp.creatorUser.fullname}</td>
+                        <td class='text-ovf'>${sp.funding}</td>
                         <td class='text-ovf'>${sp.objectives}</td>
-                        <td>${moment(sp.startDate).format('DD/MM/YYYY')}</td>
-                        <td>${moment(sp.endDate).format('DD/MM/YYYY')}</td>
-                        <td>${sp.telescopeLoc}</td>
-                        <td>${sp.target}</td>
+                        <td class='text-ovf'>${moment(sp.startDate).format('DD/MM/YYYY')}</td>
+                        <td class='text-ovf'>${moment(sp.endDate).format('DD/MM/YYYY')}</td>
+                        <td class='text-ovf'>${sp.telescopeLoc}</td>
+                        <td class='text-ovf'>${sp.target}</td>
                         <td><button type='button' class='btn btn-success' id="sci${sp.id}">Validate</button></td>
                         </tr>`)
                         $(`#sci${sp.id}`).click(() => {
