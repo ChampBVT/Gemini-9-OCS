@@ -86,7 +86,7 @@ const showTable = () => {
                         <td class='text-ovf'>${sp.funding}</td>
                         <td class='text-ovf'>${sp.objectives}</td>
                         <td class='text-ovf'><span class="date">${moment(sp.startDate).format('DD/MM/YYYY')}</span></td>
-                        <td class='text-ovf date'><span class="date">${moment(sp.endDate).format('DD/MM/YYYY')}</span></td>
+                        <td class='text-ovf'><span class="date">${moment(sp.endDate).format('DD/MM/YYYY')}</span></td>
                         <td class='text-ovf'>${sp.telescopeLoc}</td>
                         <td class='text-ovf'>${sp.target}</td>
                         <td><button type='button' class='btn btn-danger' id="sci${sp.id}">Details</button></td>

@@ -22,7 +22,7 @@ $(document).ready(() => {
             rangeInput.prop('disabled', false)
         }
     })
-    getTarget().then(res=>{
+    getTarget().then(res => {
         res.map(starsystem => {
             $('#target').append(`<option>${starsystem}</option>`);
         })
@@ -50,10 +50,12 @@ $(document).ready(() => {
                 brightness: $('#brightness').val(),
                 saturation: $('#saturation').val(),
             }
-            createPlan(data).then(res=>{
-                if(res.status === 200){
-                    alert("Create Science Plan Succeeded")
-                    goToIndex()
+            createPlan(data).then(res => {
+                if (res.status === 200) {
+                    res.json().then((sp) => {
+                        alert(`Create Science Plan Succeeded ID = ${sp.id}`)
+                        goToIndex()
+                    })
                 } else {
                     alert("Create Science Plan Failed")
                 }
