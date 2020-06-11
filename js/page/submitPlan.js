@@ -90,10 +90,10 @@ const showTable = () => {
                         <td>${moment(sp.endDate).format('DD/MM/YYYY')}</td>
                         <td>${sp.telescopeLoc}</td>
                         <td>${sp.target}</td>
-                        <td><button type='button' class='btn btn-danger' id="sci${sp.id}">More Details</button></td>
+                        <td><button type='button' class='btn btn-danger' id="sci${sp.id}">Details</button></td>
                         </tr>`)
                         $(`#sci${sp.id}`).click(() => {
-                            window.location.href = `../../submitPlan.html`
+                            window.location.href = `./submitPlan.html?planid=${sp.id}`
                         })
                     })
                 }
