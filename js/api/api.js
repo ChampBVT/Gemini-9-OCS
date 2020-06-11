@@ -1,4 +1,4 @@
-const API_URL = '//192.168.1.45:8080';
+const API_URL = '//gemini-9.herokuapp.com';
 
 const login = async (username, pwd) => {
     const res = await fetch(`${API_URL}/login`, {
