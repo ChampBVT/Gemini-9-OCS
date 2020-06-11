@@ -14,6 +14,13 @@ const getUserId = () => {
     return item.userId
 }
 
+const getUserName = () => {
+    const itemStr = localStorage.getItem("user")
+    const item = JSON.parse(itemStr)
+    checkExpired(item.expiry)
+    return item.userName
+}
+
 const getToken = () => {
     const itemStr = localStorage.getItem("user")
     const item = JSON.parse(itemStr)
@@ -25,9 +32,10 @@ const logout = () => {
     localStorage.removeItem("user")
 }
 
-const saveToLocalStr = (usrId, token) => {
+const saveToLocalStr = (fname, usrId, token) => {
     const now = new Date()
     const item = {
+        userName: fname,
         userId: usrId,
         token: token,
         expiry: now.getTime() + (3600 * 1000)

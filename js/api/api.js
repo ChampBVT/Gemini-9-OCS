@@ -26,6 +26,16 @@ const createPlan = async (data) => {
     return res
 }
 
+const testPlan = async () => {
+    const res = await fetch(`${API_URL}/api/scienceplan/test`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${getToken()}`
+        }
+    })
+    return res
+}
+
 const getTarget = async () =>{
     const res = await fetch(`${API_URL}/api/starsystems`, {
         method: 'GET',

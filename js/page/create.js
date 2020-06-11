@@ -9,7 +9,7 @@ $(document).ready(() => {
         locale: {format: 'DD/MM/YYYY'},
         opens: 'bottom'
     })
-    $('#creatorID').val(getUserId())
+    $('#creator').val(getUserName())
     $("input[name='colorType']").change(() => {
         const rangeInput = $('#saturation')
         if ($('#inlineRadio4').prop('checked')) {
@@ -54,6 +54,8 @@ $(document).ready(() => {
                 if(res.status === 200){
                     console.log(res.json())
                     goToIndex()
+                } else {
+                    alert("Create Science Plan Failed")
                 }
                 $button.prop("disabled", false)
             })

@@ -167,6 +167,30 @@ html, body {
     color: black;
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.base-table{
+    width: 70%;
+    min-width: 600px;
+    height: calc(100vh - 68px);
+}
+
+.transparent-border{
+    border-color: transparent;
+}
+
+.text-ovf{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 120px
+}
+
 @media screen and (max-width: 992px) {
     .grid-two-column {
         display: block;

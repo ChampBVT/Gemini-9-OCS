@@ -2,7 +2,6 @@
 <html lang="en">
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/daterangepicker.css">
 <link rel="stylesheet" href="css/main.css">
 <head>
     <meta charset="UTF-8">
@@ -11,129 +10,54 @@
 <body>
 <div id="navbar" class="bg" style="background-image: url(./asset/img/navbar.jpg);"></div>
 <div class="pagebase">
-
-    <div style="display: flex; justify-content: center;">
-        <div style="height: 90%; padding : 0 60px 60px 60px; width: 60%">
+    <div class="center">
+        <div class="base-table">
             <div class="flex-col head" style="padding: 20px 20px 20px 0; height: 10%">
-                Science Plan > Create
+                Science Plan > Test
             </div>
-            <div class="whitebg border-radius padding-2">
-                <form class="form-create needs-validation" novalidate id="create">
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="creatorID">Creator ID</label>
-                            <input type="number" class="form-control" id="creatorID"
-                                   placeholder="10" disabled>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="funding">Funding<span class="required"> *</span></label>
-                            <input type="number" class="form-control" id="funding"
-                                   placeholder="0.00" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="obj">Objective<span class="required"> *</span></label>
-                            <input type="text" class="form-control" id="obj"
-                                   placeholder="Destroy Earth" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="date">Date Range - Start<span class="required"> *</span></label>
-                            <input type="text" class="form-control" name="daterange" id="date" required/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="location">Telescope Location<span class="required"> *</span></label>
-                            <select class="form-control" id="location">
-                                <option>HAWAII</option>
-                                <option>CHILE</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="target">Target<span class="required"> *</span></label>
-                            <select class="form-control" id="target"></select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="fileType">File Type<span class="required"> *</span></label>
-                            <select class="form-control" id="fileType">
-                                <option>RAW</option>
-                                <option>JPEG</option>
-                                <option>PNG</option>
-                                <option>TIFF</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label style="width: 100%;">File Quality<span class="required"> *</span></label>
-                            <div style="padding-top: 5px;">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="fileQuality"
-                                           id="inlineRadio1"
-                                           value="50">
-                                    <label class="form-check-label" for="inlineRadio1">Low</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="fileQuality"
-                                           id="inlineRadio2"
-                                           value="75" checked>
-                                    <label class="form-check-label" for="inlineRadio2">Medium</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="fileQuality"
-                                           id="inlineRadio3"
-                                           value="100">
-                                    <label class="form-check-label" for="inlineRadio3">High</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label style="width: 100%;">Color Type<span class="required"> *</span></label>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="colorType"
-                                       id="inlineRadio4"
-                                       value="BW">
-                                <label class="form-check-label" for="inlineRadio4">B & W</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="colorType"
-                                       id="inlineRadio5"
-                                       value="COLOR" checked>
-                                <label class="form-check-label" for="inlineRadio5">Color</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="contrast">Contrast</label>
-                            <output name="contrastVal" > 50</output><span>%</span><span class="required"> *</span>
-                            <input type="range" class="form-control-range" id="contrast" oninput="contrastVal.value=this.value">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="brightness">Brightness</label>
-                            <output name="brightnessVal"> 50</output><span>%</span><span class="required"> *</span>
-                            <input type="range" class="form-control-range" id="brightness" oninput="brightnessVal.value=this.value">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="saturation">Saturation</label>
-                            <output name="saturationVal"> 50</output><span>%</span><span class="required"> *</span>
-                            <input type="range" class="form-control-range" id="saturation" oninput="saturationVal.value=this.value">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <label for="annotation">Annotations</label>
-                            <textarea class="form-control" id="annotation" rows="4"
-                                      style="resize: none;"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="createBtn"
-                            style="width: fit-content; padding: 5px 15px; align-self: flex-end;">Create
-                    </button>
-                </form>
+            <div class="whitebg border-radius padding" style="justify-content: flex-start;height: 80vh; overflow: auto;">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Plan ID</th>
+                    <th scope="col">Plan Name</th>
+                    <th scope="col">Creator</th>
+                    <th scope="col">Funding</th>
+                    <th scope="col">Objective</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">End</th>
+                    <th scope="col">Telescope</th>
+                    <th scope="col">Target</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody id="table-body">
+                <tr style="line-height: 2.2;">
+                    <th scope="row">22</th>
+                    <td>DESSS</td>
+                    <td>TEST</td>
+                    <td>6969669</td>
+                    <td class="text-ovf">DESTROY EARTH</td>
+                    <td>29/10/2020</td>
+                    <td>29/10/2022</td>
+                    <td>HAWAII</td>
+                    <td>EARTH</td>
+                    <td><button type="button" class="btn btn-warning">Test</button></td>
+                </tr>
+                <tr style="line-height: 2.2;">
+                    <th scope="row">22</th>
+                    <td>DESSS</td>
+                    <td>TEST</td>
+                    <td>6969669</td>
+                    <td class="text-ovf">DESTROY EARTH</td>
+                    <td>29/10/2020</td>
+                    <td>29/10/2022</td>
+                    <td>HAWAII</td>
+                    <td>EARTH</td>
+                    <td><button type="button" class="btn btn-warning">Test</button></td>
+                </tr>
+                </tbody>
+            </table>
             </div>
         </div>
     </div>
@@ -144,7 +68,6 @@
 <script src="js/lib/popper.min.js"></script>
 <script src="js/lib/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/lib/moment.min.js"></script>
-<script type="text/javascript" src="js/lib/daterangepicker.min.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/api/api.js"></script>
 <script src="js/page/test.js"></script>
