@@ -21,12 +21,12 @@ const showTable = () => {
                         $('#table-body').append(`
                         <tr style='line-height: 2.2;'>
                         <th scope='row'>${sp.id}</th>
-                        <td>${sp.name}</td>
-                        <td>${sp.creatorUser.name}</td>
-                        <td>${sp.funding}</td>
+                        <td class='text-ovf'>${sp.name}</td>
+                        <td class='text-ovf'>${sp.creatorUser.name}</td>
+                        <td class='text-ovf'>${sp.funding}</td>
                         <td class='text-ovf'>${sp.objectives}</td>
-                        <td><span style="font-size: 14px">${moment(sp.startDate).format('DD/MM/YYYY')}</span></td>
-                        <td><span style="font-size: 14px">${moment(sp.endDate).format('DD/MM/YYYY')}</span></td>
+                        <td class='text-ovf'><span class="date">${moment(sp.startDate).format('DD/MM/YYYY')}</span></td>
+                        <td class='text-ovf'><span class="date">${moment(sp.endDate).format('DD/MM/YYYY')}</span></td>
                         <td>${sp.telescopeLoc}</td>
                         <td>${sp.target}</td>
                         <td><button type='button' class='btn btn-warning' id="sci${sp.id}">Test</button></td>

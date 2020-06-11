@@ -205,6 +205,10 @@ hr.line {
     font-size: 18px;
 }
 
+.date{
+    font-size: 12.5px;
+}
+
 @media screen and (max-width: 992px) {
     .grid-two-column {
         display: block;
