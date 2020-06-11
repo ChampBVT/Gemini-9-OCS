@@ -7,6 +7,15 @@ const checkLogin = () => {
     checkExpired(item.expiry)
 }
 
+const checkRole = () => {
+    const itemStr = localStorage.getItem("user")
+    const item = JSON.parse(itemStr)
+    if(item.role==="ASTRONOMER") {
+        alert('You are not allowed here.')
+        goToIndex()
+    }
+}
+
 const getUserId = () => {
     const itemStr = localStorage.getItem("user")
     const item = JSON.parse(itemStr)
@@ -28,12 +37,13 @@ const getToken = () => {
     return item.token
 }
 
-const saveToLocalStr = (fname, usrId, token) => {
+const saveToLocalStr = (fname, usrId, token, role) => {
     const now = new Date()
     const item = {
         userName: fname,
         userId: usrId,
         token: token,
+        role: role.replace('ROLE_',''),
         expiry: now.getTime() + (3600 * 1000)
     }
     localStorage.setItem("user", JSON.stringify(item))
@@ -45,6 +55,13 @@ const loadNavbar = () => {
             localStorage.removeItem("user")
             goToLogin()
         })
+        const itemStr = localStorage.getItem("user")
+        const item = JSON.parse(itemStr)
+        if(item.role==="ASTRONOMER") {
+            addDisabled(-1, 3)
+            addDisabled(2, 4)
+        }
+        $('#user').text(`${item.userName}, Role : ${item.role}`)
     });
 
 }
@@ -66,6 +83,19 @@ const addActive = (idx1 = -1, idx2 = -1) => {
         $(".dropdown-item").each((index, obj) => {
             if (index === idx2)
                 obj.classList.add("active")
+        })
+    })
+}
+
+const addDisabled = (idx1 = -1, idx2 = -1) => {
+    $(window).on("load", () => {
+        $(".nav-item").each((index, obj) => {
+            if (index === idx1)
+                obj.classList.add("disabled")
+        })
+        $(".dropdown-item").each((index, obj) => {
+            if (index === idx2)
+                obj.classList.add("disabled")
         })
     })
 }

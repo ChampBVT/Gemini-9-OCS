@@ -13,28 +13,29 @@
     <div class="center">
         <div class="base-table">
             <div class="flex-col head" style="padding: 20px 20px 20px 0; height: 10%">
-                Science Plan > Submit
+                Science Plan > Validate
             </div>
-            <div id="container" class="whitebg border-radius padding" style="justify-content: flex-start;height: 80vh; overflow: auto;">
-            <table class="table">
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Plan ID</th>
-                    <th scope="col">Plan Name</th>
-                    <th scope="col">Creator</th>
-                    <th scope="col">Funding</th>
-                    <th scope="col">Objective</th>
-                    <th scope="col">Start</th>
-                    <th scope="col">End</th>
-                    <th scope="col">Telescope</th>
-                    <th scope="col">Target</th>
-                    <th scope="col">Action</th>
-                </tr>
-                </thead>
-                <tbody id="table-body">
-                </tbody>
-            </table>
-                <div class="center" id="spinner" style="align-items: center">
+            <div class="whitebg border-radius padding-2"
+                 style="justify-content: flex-start;height: 80vh; overflow: auto;">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Plan ID</th>
+                        <th scope="col">Plan Name</th>
+                        <th scope="col">Creator</th>
+                        <th scope="col">Funding</th>
+                        <th scope="col">Objective</th>
+                        <th scope="col">Start</th>
+                        <th scope="col">End</th>
+                        <th scope="col">Telescope</th>
+                        <th scope="col">Target</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+                <div class="center" style="align-items: center" id="spinner">
                     <div class="spinner-border" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
@@ -51,7 +52,7 @@
 <script type="text/javascript" src="js/lib/moment.min.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/api/api.js"></script>
-<script src="js/page/submit.js"></script>
+<script src="js/page/validatePlan.js"></script>
 
 
 </html>

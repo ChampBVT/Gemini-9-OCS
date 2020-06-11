@@ -9,7 +9,7 @@ $(document).ready(() => {
         locale: {format: 'DD/MM/YYYY'},
         opens: 'bottom'
     })
-    $('#creator').val(getUserName())
+    $('#creator').val(`${getUserName()}`)
     $("input[name='colorType']").change(() => {
         const rangeInput = $('#saturation')
         if ($('#inlineRadio4').prop('checked')) {
@@ -34,6 +34,7 @@ $(document).ready(() => {
         if ($form[0].checkValidity() === true) {
             $button.prop("disabled", true)
             const data = {
+                name: $('#planName').val(),
                 creator: `${getUserId()}`,
                 target: $('#target').val(),
                 funding: $('#funding').val(),
@@ -52,7 +53,6 @@ $(document).ready(() => {
             console.log(data);
             createPlan(data).then(res=>{
                 if(res.status === 200){
-                    console.log(res.json())
                     alert("Create Science Plan Succeeded")
                     goToIndex()
                 } else {

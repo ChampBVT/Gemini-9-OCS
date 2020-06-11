@@ -9,7 +9,7 @@ $(document).ready(() => {
         if ($form[0].checkValidity() === true) {
             login($("#username").val(), $("#password").val()).then((res) => {
                 if (res.message === "Successful") {
-                    saveToLocalStr(res.user.fullname, res.user.id, res.token)
+                    saveToLocalStr(res.user.fullname, res.user.id, res.token, res.user.role.name)
                     goToIndex()
                 } else
                     alert('Login Unsuccessful');

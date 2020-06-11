@@ -15,7 +15,7 @@ const login = async (username, pwd) => {
 }
 
 const createPlan = async (data) => {
-    const res = await fetch(`${API_URL}/api/scienceplan/add`, {
+    return await fetch(`${API_URL}/api/scienceplan/add`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -23,48 +23,52 @@ const createPlan = async (data) => {
             'Content-Type': 'application/json'
         }
     })
-    return res
 }
 
-const testPlan = async () => {
-    const res = await fetch(`${API_URL}/api/scienceplan/test`, {
+const testPlan = async (id) => {
+    return await fetch(`${API_URL}/api/scienceplan/test?id=${id}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${getToken()}`
         }
     })
-    return res
 }
 
 const getPlan = async (id) => {
-    const res = await fetch(`${API_URL}/api/scienceplan/${id}`, {
+    return await fetch(`${API_URL}/api/scienceplan/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${getToken()}`
         }
     })
-    return res
 }
 
 const getAllPlan = async () => {
-    const res = await fetch(`${API_URL}/api/scienceplan/`, {
+    return await fetch(`${API_URL}/api/scienceplan/`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${getToken()}`
         }
     })
-    return res
 }
 
-const submitPlan = async () => {
-    const res = await fetch(`${API_URL}/api/scienceplan/test`, {
+const submitPlan = async (id, uid) => {
+    return await fetch(`${API_URL}/api/scienceplan/submit?id=${id}&uid=${uid}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${getToken()}`
         }
     })
-    return res
 }
+const validatePlan = async (id, uid) => {
+    return await fetch(`${API_URL}/api/scienceplan/validate?id=${id}&uid=${uid}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${getToken()}`
+        }
+    })
+}
+
 
 const getTarget = async () =>{
     const res = await fetch(`${API_URL}/api/starsystems`, {

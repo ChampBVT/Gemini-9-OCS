@@ -1,0 +1,135 @@
+<form class="form-create" novalidate id="create">
+    <div class="row">
+        <div class="form-group col-md-12">
+            <a href="./submit.html"><button class="btn btn-link">Back</button></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="planId">Science Plan ID<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="planId"
+                   placeholder="Plan Name" required disabled>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="planName">Science Plan Name<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="planName"
+                   placeholder="Plan Name" required disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="creator">Creator<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="creator" disabled>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="submitter">Submitter<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="submitter" required disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="status">Status</label>
+            <input type="text" class="form-control" id="status" disabled>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="funding">Funding<span class="required"> *</span></label>
+            <input type="number" class="form-control" id="funding"
+                   placeholder="0.00" required disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="obj">Objective<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="obj"
+                   placeholder="Destroy Earth" required disabled>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="date">Date Range - Start<span class="required"> *</span></label>
+            <input type="text" class="form-control" name="daterange" id="date" required disabled/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="location">Telescope Location<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="location" required disabled />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="target">Target<span class="required"> *</span></label>
+            <input type="text" class="form-control"  id="target" required disabled />
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="fileType">File Type<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="fileType" required disabled />
+        </div>
+        <div class="form-group col-md-6">
+            <label style="width: 100%;">File Quality<span class="required"> *</span></label>
+            <div style="padding-top: 5px;">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fileQuality"
+                           id="inlineRadio1"
+                           value="50" disabled>
+                    <label class="form-check-label" for="inlineRadio1">Low</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fileQuality"
+                           id="inlineRadio2"
+                           value="75" disabled>
+                    <label class="form-check-label" for="inlineRadio2">Medium</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fileQuality"
+                           id="inlineRadio3"
+                           value="100" disabled>
+                    <label class="form-check-label" for="inlineRadio3">High</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label style="width: 100%;">Color Type<span class="required"> *</span></label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="colorType"
+                       id="inlineRadio4"
+                       value="BW" disabled>
+                <label class="form-check-label" for="inlineRadio4">B & W</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="colorType"
+                       id="inlineRadio5"
+                       value="COLOR" disabled>
+                <label class="form-check-label" for="inlineRadio5">Color</label>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="contrast">Contrast</label>
+            <output name="contrastVal" > 50</output><span>%</span><span class="required"> *</span>
+            <input type="range" class="form-control-range" id="contrast" disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="brightness">Brightness</label>
+            <output name="brightnessVal"> 50</output><span>%</span><span class="required"> *</span>
+            <input type="range" class="form-control-range" id="brightness" disabled>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="saturation">Saturation</label>
+            <output name="saturationVal"> 50</output><span>%</span><span class="required"> *</span>
+            <input type="range" class="form-control-range" id="saturation" disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label for="annotation">Annotations</label>
+            <textarea class="form-control" id="annotation" rows="2"
+                      style="resize: none;" disabled></textarea>
+        </div>
+    </div>
+    <button type="button" class="btn btn-danger" id="button"
+            style="width: fit-content; padding: 5px 15px; align-self: flex-end; margin-top: 10px;margin-bottom: 25px;">
+        Submit
+    </button>
+</form>
