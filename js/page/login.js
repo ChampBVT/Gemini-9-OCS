@@ -11,11 +11,13 @@ $(document).ready(() => {
                 if (res.message === "Successful") {
                     saveToLocalStr(res.user.fullname, res.user.id, res.token)
                     goToIndex()
-                }
+                } else
+                    alert('Login Unsuccessful');
                 $button.prop("disabled", false)
-            }).catch(
+            }).catch((err)=>{
+                alert('There was an error');
                 $button.prop("disabled", false)
-            )
+            })
         }
         $form[0].classList.add('was-validated')
     });

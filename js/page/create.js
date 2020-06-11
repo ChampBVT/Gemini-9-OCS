@@ -53,6 +53,7 @@ $(document).ready(() => {
             createPlan(data).then(res=>{
                 if(res.status === 200){
                     console.log(res.json())
+                    alert("Create Science Plan Succeeded")
                     goToIndex()
                 } else {
                     alert("Create Science Plan Failed")

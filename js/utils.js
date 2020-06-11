@@ -28,10 +28,6 @@ const getToken = () => {
     return item.token
 }
 
-const logout = () => {
-    localStorage.removeItem("user")
-}
-
 const saveToLocalStr = (fname, usrId, token) => {
     const now = new Date()
     const item = {

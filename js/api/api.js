@@ -36,6 +36,36 @@ const testPlan = async () => {
     return res
 }
 
+const getPlan = async (id) => {
+    const res = await fetch(`${API_URL}/api/scienceplan/${id}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${getToken()}`
+        }
+    })
+    return res
+}
+
+const getAllPlan = async () => {
+    const res = await fetch(`${API_URL}/api/scienceplan/`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${getToken()}`
+        }
+    })
+    return res
+}
+
+const submitPlan = async () => {
+    const res = await fetch(`${API_URL}/api/scienceplan/test`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${getToken()}`
+        }
+    })
+    return res
+}
+
 const getTarget = async () =>{
     const res = await fetch(`${API_URL}/api/starsystems`, {
         method: 'GET',
