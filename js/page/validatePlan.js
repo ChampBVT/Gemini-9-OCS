@@ -23,7 +23,7 @@ const showTable = () => {
                         <tr style='line-height: 2.2;'>
                         <th scope='row'>${sp.id}</th>
                         <td class='text-ovf'>${sp.name}</td>
-                        <td class='text-ovf'>${sp.creatorUser.fullname}</td>
+                        <td class='text-ovf'>${sp.creatorUser.name}</td>
                         <td class='text-ovf'>${sp.funding}</td>
                         <td class='text-ovf'>${sp.objectives}</td>
                         <td class='text-ovf'>${moment(sp.startDate).format('DD/MM/YYYY')}</td>

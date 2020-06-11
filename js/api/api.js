@@ -1,5 +1,5 @@
+//const API_URL = '//192.168.1.45:8080';
 const API_URL = '//gemini-9.herokuapp.com';
-
 const login = async (username, pwd) => {
     const res = await fetch(`${API_URL}/login`, {
         method: 'POST',
@@ -69,6 +69,16 @@ const validatePlan = async (id, uid) => {
     })
 }
 
+const createProgram = async (data) => {
+    return await fetch(`${API_URL}/api/observingprogram/create`, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Authorization': `Bearer ${getToken()}`,
+            'Content-Type': 'application/json'
+        }
+    })
+}
 
 const getTarget = async () =>{
     const res = await fetch(`${API_URL}/api/starsystems`, {

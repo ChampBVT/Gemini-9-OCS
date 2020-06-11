@@ -43,14 +43,13 @@ $(document).ready(() => {
                 endDate: daterange.data('daterangepicker').endDate.format('YYYY-DD-MM'),
                 telescopeLoc: $('#location').val(),
                 fileType: $('#fileType').val(),
-                fileQuality: $("input[name='fileQuality']").val(),
-                colorType: $("input[name='colorType']").val(),
+                fileQuality: $("input[name='fileQuality']:checked").val(),
+                colorType: $("input[name='colorType']:checked").val(),
                 annotations: $('#annotation').val(),
                 contrast: $('#contrast').val(),
                 brightness: $('#brightness').val(),
                 saturation: $('#saturation').val(),
             }
-            console.log(data);
             createPlan(data).then(res=>{
                 if(res.status === 200){
                     alert("Create Science Plan Succeeded")

@@ -10,29 +10,31 @@ const checkLogin = () => {
 const checkRole = () => {
     const itemStr = localStorage.getItem("user")
     const item = JSON.parse(itemStr)
-    if(item.role==="ASTRONOMER") {
-        alert('You are not allowed here.')
+    if(item.role!=="OBSERVER"&&item.role!=="ADMIN") {
+        alert(`${item.role} are not allowed here.`)
         goToIndex()
     }
 }
 
-const getUserId = () => {
+const getLocalStorage = () => {
     const itemStr = localStorage.getItem("user")
-    const item = JSON.parse(itemStr)
+    return JSON.parse(itemStr)
+}
+
+const getUserId = () => {
+    const item = getLocalStorage()
     checkExpired(item.expiry)
     return item.userId
 }
 
 const getUserName = () => {
-    const itemStr = localStorage.getItem("user")
-    const item = JSON.parse(itemStr)
+    const item = getLocalStorage()
     checkExpired(item.expiry)
     return item.userName
 }
 
 const getToken = () => {
-    const itemStr = localStorage.getItem("user")
-    const item = JSON.parse(itemStr)
+    const item = getLocalStorage()
     checkExpired(item.expiry)
     return item.token
 }
@@ -57,7 +59,7 @@ const loadNavbar = () => {
         })
         const itemStr = localStorage.getItem("user")
         const item = JSON.parse(itemStr)
-        if(item.role==="ASTRONOMER") {
+        if(item.role!=="OBSERVER"&&item.role!=="ADMIN") {
             addDisabled(-1, 3)
             addDisabled(2, 4)
         }
@@ -72,6 +74,12 @@ const goToIndex = () => {
 
 const goToLogin = () => {
     window.location.href = `./login.html`
+}
+
+const getRole = () => {
+    const itemStr = localStorage.getItem("user")
+    const item = JSON.parse(itemStr)
+    return item.role
 }
 
 const addActive = (idx1 = -1, idx2 = -1) => {

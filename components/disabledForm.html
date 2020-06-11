@@ -1,19 +1,19 @@
-<form class="form-create" novalidate id="create">
+<form class="form-create" novalidate id="disable">
     <div class="row">
         <div class="form-group col-md-12">
-            <a href="./submit.html"><button class="btn btn-link">Back</button></a>
+            <a href="./submit.html"><button class="btn btn-light">Back</button></a>
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <label for="planId">Science Plan ID<span class="required"> *</span></label>
             <input type="text" class="form-control" id="planId"
-                   placeholder="Plan Name" required disabled>
+                   placeholder="Plan Name" disabled>
         </div>
         <div class="form-group col-md-6">
             <label for="planName">Science Plan Name<span class="required"> *</span></label>
             <input type="text" class="form-control" id="planName"
-                   placeholder="Plan Name" required disabled>
+                   placeholder="Plan Name" disabled>
         </div>
     </div>
     <div class="row">
@@ -23,45 +23,45 @@
         </div>
         <div class="form-group col-md-6">
             <label for="submitter">Submitter<span class="required"> *</span></label>
-            <input type="text" class="form-control" id="submitter" required disabled>
+            <input type="text" class="form-control" id="submitter"  disabled>
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
-            <label for="status">Status</label>
+            <label for="status" id="statusLabel">Status</label>
             <input type="text" class="form-control" id="status" disabled>
         </div>
         <div class="form-group col-md-6">
             <label for="funding">Funding<span class="required"> *</span></label>
             <input type="number" class="form-control" id="funding"
-                   placeholder="0.00" required disabled>
+                   placeholder="0.00" disabled>
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <label for="obj">Objective<span class="required"> *</span></label>
             <input type="text" class="form-control" id="obj"
-                   placeholder="Destroy Earth" required disabled>
+                   placeholder="Destroy Earth" disabled>
         </div>
         <div class="form-group col-md-6">
             <label for="date">Date Range - Start<span class="required"> *</span></label>
-            <input type="text" class="form-control" name="daterange" id="date" required disabled/>
+            <input type="text" class="form-control" name="daterange" id="date" disabled/>
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <label for="location">Telescope Location<span class="required"> *</span></label>
-            <input type="text" class="form-control" id="location" required disabled />
+            <input type="text" class="form-control" id="location"  disabled />
         </div>
         <div class="form-group col-md-6">
             <label for="target">Target<span class="required"> *</span></label>
-            <input type="text" class="form-control"  id="target" required disabled />
+            <input type="text" class="form-control"  id="target" disabled />
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <label for="fileType">File Type<span class="required"> *</span></label>
-            <input type="text" class="form-control" id="fileType" required disabled />
+            <input type="text" class="form-control" id="fileType"  disabled />
         </div>
         <div class="form-group col-md-6">
             <label style="width: 100%;">File Quality<span class="required"> *</span></label>
@@ -128,6 +128,7 @@
                       style="resize: none;" disabled></textarea>
         </div>
     </div>
+    <div id="extend"></div>
     <button type="button" class="btn btn-danger" id="button"
             style="width: fit-content; padding: 5px 15px; align-self: flex-end; margin-top: 10px;margin-bottom: 25px;">
         Submit

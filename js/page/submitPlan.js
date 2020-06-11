@@ -13,7 +13,7 @@ $(document).ready(() => {
                     $('#container').load("./components/disabledForm.html", () => {
                         $('#planId').val(sp.id)
                         $('#planName').val(sp.name)
-                        $('#creator').val(sp.creatorUser.fullname)
+                        $('#creator').val(sp.creatorUser.name)
                         $('#submitter').val(getUserName())
                         $('#status').val(sp.status)
                         $('#funding').val(sp.funding)
@@ -38,7 +38,7 @@ $(document).ready(() => {
                         $('#annotation').val(sp.annotations)
                         $("output[name='contrastVal']").val(sp.dpr.contrast)
                         $("output[name='brightnessVal']").val(sp.dpr.brightness)
-                        $("output[name='saturation']").val(sp.dpr.saturation)
+                        $("output[name='saturationVal']").val(sp.dpr.saturation)
                         $('#button').click(()=>{
                             $('#button').prop('disabled', true)
                             submitPlan(sp.id, getUserId()).then(res=>{
@@ -57,7 +57,7 @@ $(document).ready(() => {
                 })
             } else {
                 alert('Science Plan Not found.')
-                window.location.href = `../../submitPlan.html`
+                window.location.href = `./submitPlan.html`
             }
 
         })
@@ -76,14 +76,13 @@ const showTable = () => {
                     $('div').removeClass("spinner-border")
                     $('#spinner').text('0 Result Found')
                 } else {
-                    console.log(filteredSp)
                     $('#spinner').hide()
                     filteredSp.map(sp => {
                         $('#table-body').append(`
                         <tr style='line-height: 2.2;'>
                         <th scope='row'>${sp.id}</th>
                         <td class='text-ovf'>${sp.name}</td>
-                        <td class='text-ovf'>${sp.creatorUser.fullname}</td>
+                        <td class='text-ovf'>${sp.creatorUser.name}</td>
                         <td class='text-ovf'>${sp.funding}</td>
                         <td class='text-ovf'>${sp.objectives}</td>
                         <td class='text-ovf'><span style="font-size: 14px">${moment(sp.startDate).format('DD/MM/YYYY')}</span></td>

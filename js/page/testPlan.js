@@ -3,7 +3,6 @@ $(document).ready(() => {
     loadNavbar()
     addActive(1, 1);
     showTable()
-
 })
 
 const showTable = () => {
@@ -23,7 +22,7 @@ const showTable = () => {
                         <tr style='line-height: 2.2;'>
                         <th scope='row'>${sp.id}</th>
                         <td>${sp.name}</td>
-                        <td>${sp.creatorUser.fullname}</td>
+                        <td>${sp.creatorUser.name}</td>
                         <td>${sp.funding}</td>
                         <td class='text-ovf'>${sp.objectives}</td>
                         <td><span style="font-size: 14px">${moment(sp.startDate).format('DD/MM/YYYY')}</span></td>

@@ -190,6 +190,21 @@ html, body {
     max-width: 110px
 }
 
+hr.solid {
+    border-top: 2px solid #999;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+hr.line {
+    border-top: 1px solid #999;
+}
+
+.row-header{
+    font-weight: bold;
+    font-size: 18px;
+}
+
 @media screen and (max-width: 992px) {
     .grid-two-column {
         display: block;

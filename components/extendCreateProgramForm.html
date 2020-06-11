@@ -1,0 +1,103 @@
+<hr class="solid"/>
+<div class="row form-group col-md-12 row-header">Lens</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="lensMake">Make<span class="required"> *</span></label>
+        <input type="text" class="form-control" id="lensMake"
+               placeholder="Canon" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="lensModel">Model<span class="required"> *</span></label>
+        <input type="text" class="form-control" id="lensModel"
+               placeholder="DX-300" required>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="lensManufacturer">Manufacturer<span class="required"> *</span></label>
+        <input type="text" placeholder="Canon Inc." class="form-control" id="lensManufacturer" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="lensYear">Year<span class="required"> *</span></label>
+        <input type="number" placeholder="2018" class="form-control" id="lensYear" required>
+    </div>
+</div>
+<hr class="line"/>
+<div class="row form-group col-md-12 row-header">Filters</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="filtersMake">Make<span class="required"> *</span></label>
+        <input type="text" class="form-control" id="filtersMake" placeholder="Canon" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="filtersManufacturer">Manufacturer<span class="required"> *</span></label>
+        <input type="text" class="form-control" id="filtersManufacturer"
+               placeholder="Canon Inc." required>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="filtersModel">Model<span class="required"> *</span></label>
+        <input type="text" class="form-control" id="filtersModel"
+               placeholder="RF-200" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="filtersYear">Year<span class="required"> *</span></label>
+        <input type="number" class="form-control" placeholder="2017" id="filtersYear" required/>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="filtersSize">Size<span class="required"> *</span></label>
+        <input type="number" class="form-control" placeholder="5" id="filtersSize" required/>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="filtersWeight">Weight<span class="required"> *</span></label>
+        <input type="number" class="form-control" placeholder="2.5" id="filtersWeight" required/>
+    </div>
+</div>
+<hr class="line"/>
+<div class="row form-group col-md-12 row-header">Special Equipments</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="equipmentName">Equipment Name<span class="required"> *</span></label>
+        <input type="text" class="form-control" placeholder="R2D2" id="equipmentName" required/>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="ownerName">Owner Name<span class="required"> *</span></label>
+        <input type="text" class="form-control" placeholder="Luke Skywalker" id="ownerName" required/>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="installedDate">Installed Date<span class="required"> *</span></label>
+        <input type="text" class="form-control" name="date" id="installedDate" required/>
+    </div>
+    <div class="form-group col-md-6">
+        <label style="width: 100%; padding-bottom: 5px">Light Detector<span class="required"> *</span></label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="lightDetectorON"
+                   id="lightOff" value="false">
+            <label class="form-check-label" for="lightOff">Off</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="lightDetectorON"
+                   id="lightOn" value="true" checked>
+            <label class="form-check-label" for="lightOn">On</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="exposures">Exposures</label>
+        <input type="text" class="form-control" placeholder="100.00, 10000.0, 9999.99" id="exposures" required/>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-12" style="display: flex; justify-content: flex-end;">
+        <button type="submit" class="btn btn-primary" id="createBtn"
+                style="width: fit-content; padding: 5px 15px; align-self: flex-end; margin-top: 10px;margin-bottom: 25px;">
+            Create
+        </button>
+    </div>
+</div>
