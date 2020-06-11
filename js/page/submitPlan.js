@@ -86,8 +86,8 @@ const showTable = () => {
                         <td>${sp.creatorUser.fullname}</td>
                         <td>${sp.funding}</td>
                         <td class='text-ovf'>${sp.objectives}</td>
-                        <td>${moment(sp.startDate).format('DD/MM/YYYY')}</td>
-                        <td>${moment(sp.endDate).format('DD/MM/YYYY')}</td>
+                        <td><span style="font-size: 14px">${moment(sp.startDate).format('DD/MM/YYYY')}</span></td>
+                        <td><span style="font-size: 14px">${moment(sp.endDate).format('DD/MM/YYYY')}</span></td>
                         <td>${sp.telescopeLoc}</td>
                         <td>${sp.target}</td>
                         <td><button type='button' class='btn btn-danger' id="sci${sp.id}">Details</button></td>
