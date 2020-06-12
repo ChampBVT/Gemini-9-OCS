@@ -7,11 +7,11 @@ const checkLogin = () => {
     checkExpired(item.expiry)
 }
 
-const checkRole = () => {
+const checkRole = (role) => {
     const itemStr = localStorage.getItem("user")
     const item = JSON.parse(itemStr)
-    if(item.role!=="OBSERVER"&&item.role!=="ADMIN") {
-        alert(`${item.role} are not allowed here.`)
+    if(item.role!==role&&item.role!=='ADMIN') {
+        alert(`${item.role} is not allowed here.`)
         goToIndex()
     }
 }
@@ -51,7 +51,7 @@ const saveToLocalStr = (name, usrId, token, role) => {
     localStorage.setItem("user", JSON.stringify(item))
 }
 
-const loadNavbar = () => {
+const loadNavbar = (idx1 = -1, idx2 = -1) => {
     $("#navbar").load("./components/navbar.html",()=>{
         $('#logout').click(()=>{
             localStorage.removeItem("user")
@@ -59,11 +59,16 @@ const loadNavbar = () => {
         })
         const itemStr = localStorage.getItem("user")
         const item = JSON.parse(itemStr)
-        if(item.role!=="OBSERVER"&&item.role!=="ADMIN") {
+        if(item.role==="ASTRONOMER") {
             addDisabled(-1, 3)
             addDisabled(2, 4)
+        } else if (item.role ==="OBSERVER"){
+            addDisabled(-1, 0)
+            addDisabled(-1, 1)
+            addDisabled(-1, 2)
         }
         $('#user').text(`${item.userName}, Role : ${item.role}`)
+        addActive(idx1, idx2)
     });
 
 }

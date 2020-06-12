@@ -1,7 +1,7 @@
 $(document).ready(() => {
+    checkRole('ASTRONOMER')
     checkLogin()
-    loadNavbar()
-    addActive(1, 2);
+    loadNavbar(1, 2)
     if (window.location.search.includes('?planid=')) {
         $('#table').remove()
         $('#breadcrumb').text(`Science Plan > Submit > ${window.location.search.replace('?planid=', '')}`)

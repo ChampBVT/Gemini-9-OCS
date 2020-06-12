@@ -1,7 +1,7 @@
 $(document).ready(() => {
+    checkRole('ASTRONOMER')
     checkLogin()
-    loadNavbar()
-    addActive(1, 1);
+    loadNavbar(1, 1)
     showTable()
 })
 

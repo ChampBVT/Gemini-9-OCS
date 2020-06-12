@@ -1,8 +1,7 @@
 $(document).ready(() => {
-    checkRole()
+    checkRole('OBSERVER')
     checkLogin()
-    loadNavbar()
-    addActive(1, 3);
+    loadNavbar(1, 3)
     showTable()
 })
 
@@ -38,7 +37,11 @@ const showTable = () => {
                                 if (res.status === 200) {
                                     alert(`Validate Science Plan Succeeded ID = ${sp.id}`)
                                     goToIndex()
-                                } else {
+                                } else if (res.status === 403){
+                                    alert(`${getRole()} is not allowed to validate a science plan.`)
+                                    showTable()
+                                }
+                                else {
                                     alert(`There was an error`)
                                     showTable()
                                     checkLogin()

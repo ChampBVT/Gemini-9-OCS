@@ -1,10 +1,10 @@
 $(document).ready(() => {
+    checkRole('ASTRONOMER')
     checkLogin()
     const daterange = $('input[name="daterange"]')
     const $form = $("#create")
     const $button = $("#createBtn")
-    loadNavbar()
-    addActive(1, 0);
+    loadNavbar(1, 0)
     daterange.daterangepicker({
         locale: {format: 'DD/MM/YYYY'},
         opens: 'bottom',
