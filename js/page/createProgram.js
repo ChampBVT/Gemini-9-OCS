@@ -46,11 +46,13 @@ $(document).ready(() => {
                         $("output[name='brightnessVal']").val(sp.dpr.brightness)
                         $("output[name='saturationVal']").val(sp.dpr.saturation)
                         $('#extend').load("./components/extendCreateProgramForm.html", ()=>{
+                            $('#back').click(()=> window.location.href = './createProgram.html')
                             const daterange = $('input[name="date"]')
                             daterange.daterangepicker({
                                 singleDatePicker: true,
                                 locale: {format: 'DD/MM/YYYY'},
                                 opens: 'bottom',
+                                maxDate: moment(),
                                 drops: 'up'
                             })
                             const $form = $('#disable')

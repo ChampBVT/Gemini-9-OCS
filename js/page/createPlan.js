@@ -7,7 +7,8 @@ $(document).ready(() => {
     addActive(1, 0);
     daterange.daterangepicker({
         locale: {format: 'DD/MM/YYYY'},
-        opens: 'bottom'
+        opens: 'bottom',
+        minDate: moment()
     })
     $('#creator').val(`${getUserName()}`)
     $("input[name='colorType']").change(() => {

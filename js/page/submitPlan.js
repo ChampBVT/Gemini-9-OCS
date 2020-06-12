@@ -11,6 +11,7 @@ $(document).ready(() => {
                     $('#spinner').hide()
                     $('.base-table').css("width", "50%");
                     $('#container').load("./components/disabledForm.html", () => {
+                        $('#back').click(()=> window.location.href = './submitPlang.html')
                         $('#planId').val(sp.id)
                         $('#planName').val(sp.name)
                         $('#creator').val(sp.creatorUser.name)
