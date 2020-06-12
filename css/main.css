@@ -190,6 +190,10 @@ html, body {
     max-width: 150px
 }
 
+.col{
+    white-space: nowrap;
+}
+
 hr.solid {
     border-top: 2px solid #999;
     margin-top: 3rem;
