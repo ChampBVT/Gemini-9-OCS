@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    checkRole('OBSERVER')
     checkLogin()
+    checkRole('OBSERVER')
     loadNavbar(1, 3)
     showTable()
 })
@@ -29,7 +29,7 @@ const showTable = () => {
                         <td class='text-ovf'><span class="date">${moment(sp.endDate).format('DD/MM/YYYY')}</span></td>
                         <td class='text-ovf'>${sp.telescopeLoc}</td>
                         <td class='text-ovf'>${sp.target}</td>
-                        <td><button type='button' class='btn btn-success' id="sci${sp.id}">Validate</button></td>
+                        <td><button type='button' class='btn btn-warning' id="sci${sp.id}">Validate</button></td>
                         </tr>`)
                         $(`#sci${sp.id}`).click(() => {
                             $(`#sci${sp.id}`).prop('disabled', true)

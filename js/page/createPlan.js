@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    checkRole('ASTRONOMER')
     checkLogin()
+    checkRole('ASTRONOMER')
     const daterange = $('input[name="daterange"]')
     const $form = $("#create")
     const $button = $("#createBtn")

@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    checkRole('OBSERVER')
     checkLogin()
+    checkRole('OBSERVER')
     loadNavbar(2, 4)
     if (window.location.search.includes('?planid=')) {
         $('#table').remove()

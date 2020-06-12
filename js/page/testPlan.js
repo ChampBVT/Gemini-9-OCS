@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    checkRole('ASTRONOMER')
     checkLogin()
+    checkRole('ASTRONOMER')
     loadNavbar(1, 1)
     showTable()
 })
@@ -29,7 +29,7 @@ const showTable = () => {
                         <td class='text-ovf'><span class="date">${moment(sp.endDate).format('DD/MM/YYYY')}</span></td>
                         <td>${sp.telescopeLoc}</td>
                         <td>${sp.target}</td>
-                        <td><button type='button' class='btn btn-warning' id="sci${sp.id}">Test</button></td>
+                        <td><button type='button' class='btn btn-danger' id="sci${sp.id}">Test</button></td>
                         </tr>`)
                         $(`#sci${sp.id}`).click(() => {
                             $(`#sci${sp.id}`).prop('disabled', true)
