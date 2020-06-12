@@ -2,7 +2,7 @@ $(document).ready(() => {
     checkRole()
     checkLogin()
     loadNavbar()
-    addActive(1, 2);
+    addActive(2, 4);
     if (window.location.search.includes('?planid=')) {
         $('#table').remove()
         $('#breadcrumb').text(`Observing Program > Create > ${window.location.search.replace('?planid=', '')}`)
