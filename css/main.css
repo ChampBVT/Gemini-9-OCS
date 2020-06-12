@@ -132,6 +132,7 @@ html, body {
 
 .button{
     cursor: pointer;
+    height: 18vh;
 }
 
 .button:hover{
