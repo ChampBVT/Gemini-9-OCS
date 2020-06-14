@@ -92,10 +92,10 @@ $(document).ready(() => {
                                     }
                                     createProgram(data).then(res=>{
                                         if(res.status === 200){
-                                            alert("Create Science Plan Succeeded")
+                                            alert("Create Observing Program Succeeded")
                                             goToIndex()
                                         } else {
-                                            alert("Create Science Plan Failed")
+                                            alert("Create Observing Program Failed")
                                         }
                                         $button.prop("disabled", false)
                                     })
